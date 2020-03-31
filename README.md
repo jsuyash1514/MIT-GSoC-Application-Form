@@ -77,6 +77,7 @@ android.hardware.Camera.PictureCallback pictureCallback = new android.hardware.C
         @Override
         public void onPictureTaken(byte[] data, android.hardware.Camera camera) {
           try {
+            final File image = new File(Environment.getExternalStorageDirectory(),"/Pictures/app_inventor_" + new Date().getTime() + ".jpg");
             FileOutputStream fos = new FileOutputStream(image);
             fos.write(data);
             fos.close();
@@ -108,13 +109,12 @@ This allows user to automatically capture the image using the device camera and 
     CountDownTimer timer = new CountDownTimer(totalTime,gapInMillisec) {
       @Override
       public void onTick(long millisUntilFinished) {
-        Log.d("Cameratesting", "Picture request initiated");
-          TakePicture();
+         TakePicture();
       }
   
       @Override
       public void onFinish() {
-        Log.d("Cameratesting", "Timer finished");
+      
       }
     }.start();
   }
