@@ -121,6 +121,6 @@ This allows user to automatically capture the image using the device camera and 
 ```
 I created a new function in the [Camera.java class](https://github.com/mit-cml/appinventor-sources/blob/ucr/appinventor/components/src/com/google/appinventor/components/runtime/Camera.java) which takes the regular interval and the total time as a parameter. User can now simply use this function as shown below:
 
-<img></img>
+<img src = "./assets/block.png"></img>
 
 This block enables the user to click multiple pics at a regular time interval on a single button click.
